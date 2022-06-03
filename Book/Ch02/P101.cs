@@ -4,14 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Book.Ch01
+namespace Book.Ch02
 {
-    internal class P50
+    internal class P101
     {
+        // var global = 52;
+
         static void Main1(string[] args)
         {
-            Console.Write("Write");
+            var number = 10.2;
+            //number = "변경";
 
+            var local = 273;    
         }
     }
+
 }

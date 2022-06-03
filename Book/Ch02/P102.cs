@@ -4,14 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Book.Ch01
+namespace Book.Ch02
 {
-    internal class P50
+    internal class P102
     {
         static void Main1(string[] args)
         {
-            Console.Write("Write");
+            var number = 20;
 
+            var n1 = 100L;
+            var n2 = 1000.0;
+            var n3 = 100.0f;
         }
     }
+
 }

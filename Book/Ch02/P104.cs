@@ -4,14 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Book.Ch01
+namespace Book.Ch02
 {
-    internal class P50
+    internal class P104
     {
         static void Main1(string[] args)
         {
-            Console.Write("Write");
-
+            string input = Console.ReadLine();
+            Console.WriteLine("input : " + input);
         }
     }
+
 }
