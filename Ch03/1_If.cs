@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 namespace Ch03
 {
     /*
-     * 
-     *
-     *
+     * 날짜 : 2022/06/03
+     * 이름 : 이동건
+     * 내용 : 조건문 if 실습 교재 p127
      */
     internal class _1_If
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             #region if
             int num1 = 1;
