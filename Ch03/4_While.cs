@@ -9,7 +9,7 @@ namespace Ch03
     // p167
     internal class _4_While
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             #region 1부터 10까지 합
             int sum = 0;
