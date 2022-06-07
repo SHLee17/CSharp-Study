@@ -11,32 +11,35 @@ namespace Baekjoon._2단계
         static void Main(string[] args)
         {
             int range = int.Parse(Console.ReadLine());
-            List<List<int>> list = new List<List<int>>();
-            for (int i = 0; i < range; i++)
-            {
-                List<int> tempList = new List<int>();
-
-                string[] str = Console.ReadLine().Split();
-                foreach (string item in str)
-                    tempList.Add(int.Parse(item));
-
-                list.Add(tempList);
-            }
 
             for (int i = 0; i < range; i++)
             {
-                foreach (int item in list[i])
+                string[] input = Console.ReadLine().Split();
+
+                int count = int.Parse(input[0]);
+                //int[] nums = new int[count];
+
+                double avrgScore = 0;
+                for (int j = 1; j < count + 1; j++)
+                    avrgScore += double.Parse(input[j]);
+
+                avrgScore = avrgScore / count;
+
+                int avrgCount = 0;
+                for (int j = 1; j < count + 1; j++)
                 {
-                    Console.Write(item);
+                    if (avrgScore < int.Parse(input[j]))
+                        avrgCount++;
                 }
-                Console.WriteLine();
+
+                double avrg = (double)avrgCount / count * 100;
+
+                Console.WriteLine("{0:#0.000%}", avrg);
+                //nums[i] = avrg;
             }
-            
 
-
-
-            
-
+            //foreach  (double item in nums)
+            //    Console.WriteLine(Math.Round(item,3));
         }
 
     }
