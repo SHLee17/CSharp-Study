@@ -14,8 +14,6 @@
     <Folder Include="7단계\" />
     <Folder Include="6단계\" />
     <Folder Include="5단계\" />
-    <Folder Include="4단계\" />
-    <Folder Include="3단계\" />
   </ItemGroup>
 
 </Project>
