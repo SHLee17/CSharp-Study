@@ -8,7 +8,6 @@ namespace Baekjoon._2단계
 {
     internal class Main4_05
     {
-        //remainder, 42
         static void Main1(string[] args)
         {
 

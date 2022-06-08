@@ -8,38 +8,38 @@ namespace Baekjoon._2단계
 {
     internal class Main4_07
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             int range = int.Parse(Console.ReadLine());
 
             for (int i = 0; i < range; i++)
             {
                 string[] input = Console.ReadLine().Split();
-
                 int count = int.Parse(input[0]);
-                //int[] nums = new int[count];
+                int[] inputNum = new int[count + 1];
 
-                double avrgScore = 0;
+                int avrgScore = 0;
+                int avrgCount = 0;
+
                 for (int j = 1; j < count + 1; j++)
-                    avrgScore += double.Parse(input[j]);
+                {
+                    inputNum[j] = int.Parse(input[j]);
+
+                    avrgScore += inputNum[j];
+                }
 
                 avrgScore = avrgScore / count;
 
-                int avrgCount = 0;
                 for (int j = 1; j < count + 1; j++)
                 {
-                    if (avrgScore < int.Parse(input[j]))
+                    if (avrgScore < inputNum[j])
                         avrgCount++;
                 }
 
-                double avrg = (double)avrgCount / count * 100;
+                float avrg = (float)avrgCount / count * 100;
 
-                Console.WriteLine("{0:#0.000%}", avrg);
-                //nums[i] = avrg;
+                Console.WriteLine($"{avrg:F3}%");
             }
-
-            //foreach  (double item in nums)
-            //    Console.WriteLine(Math.Round(item,3));
         }
 
     }
