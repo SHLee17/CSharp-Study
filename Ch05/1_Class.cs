@@ -9,7 +9,7 @@ namespace Ch05
 {
     internal class _1_Class
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             Car sonata = new Car();
             sonata.speed = 0;
