@@ -49,7 +49,7 @@ namespace Ch05
     }
     internal class _4_Inheritance
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             Child c1 = new Child(1, 2, 3, 4);
             Child c2 = new Child(10, 20, 30, 40);
