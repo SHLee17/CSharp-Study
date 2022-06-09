@@ -8,7 +8,7 @@ namespace Baekjoon._6단계
 {
     internal class Main6_05
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
 
             int[] count = new int[26];
@@ -22,20 +22,23 @@ namespace Baekjoon._6단계
             }
 
             int bigest = count[0];
-            char answer = 'a';
+            int answer = 0;
             bool isOnly = true;
 
-            for (int i = 0; i < 26; i++)
+            for (int i = 1; i < 26; i++)
             {
-                if(bigest > count[i])
+                if(bigest < count[i])
                 {
                     bigest = count[i];
+                    answer = i;
                 }
                 else if (bigest == count[i])
                 {
                     isOnly = false;
                 }
             }
+
+            Console.WriteLine(isOnly ? (char)(answer + 'A') :"?");
             #region old
                 //string strInput = Console.ReadLine().ToUpper();
 
