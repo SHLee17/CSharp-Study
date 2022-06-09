@@ -4,13 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ch05.Sub2
+namespace Ch05.Sub4
 {
     internal class Account
     {
-
-
-
         protected string bank;
         protected string id;
         protected string name;
@@ -33,7 +30,6 @@ namespace Ch05.Sub2
             Console.WriteLine("계좌번호 \t: {0}", id);
             Console.WriteLine("이름 \t\t: {0}", name);
             Console.WriteLine("현재잔액 \t: {0}", balance);
-            Console.WriteLine("================================");
 
 
         }
