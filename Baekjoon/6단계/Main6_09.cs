@@ -8,7 +8,7 @@ namespace Baekjoon._6단계
 {
     internal class Main6_09
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             string[] alphabetList =
             {
@@ -17,6 +17,7 @@ namespace Baekjoon._6단계
             };
 
             string input = Console.ReadLine();
+            //input.Replace("c=", "0"); 이걸 쓰면 됨
             int wordCount = 0;
             int count = 0;
 
