@@ -11,39 +11,37 @@ namespace Baekjoon._7단계
         static void Main(string[] args)
         {
             int input = int.Parse(Console.ReadLine());
-            int f = 1, b = 1, seachCount = 1;
-            int f1 = 1, b1 = -1;
+            int x = 1, y = 1;
+            int x1 = 1, y1 = -1;
             int temp = 0;
             while (true)
             {
-                
-                if (f == 1)
+                if (1 == input) break;
+
+                if (x == 1)
                 {
-                    b++;
-                    temp = b;
+                    y++;
+                    temp = y;
                     input--;
                 }
-                else if (b == 1)
+                else if (y == 1)
                 {
-                    f++;
-                    temp = f;
+                    x++;
+                    temp = x;
                     input--;
                 }
                 for (int i = 1; i < temp; i++)
                     {
-                    if (0 == input) break;
-                        f += f1;
-                        b += b1;
+                    if (1 == input) break;
+                        x += x1;
+                        y += y1;
                         input--;
                     }
-                f1 *= -1;
-                b1 *= -1;
-
-                if (0 == input) break;
-
+                x1 *= -1;
+                y1 *= -1;
             }
 
-            Console.WriteLine("{0}/{1}", f, b);
+            Console.WriteLine("{0}/{1}", x, y);
         }
 
     }
