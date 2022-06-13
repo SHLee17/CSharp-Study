@@ -8,7 +8,7 @@ namespace Baekjoon._7단계
 {
     internal class Main7_03
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             int input = int.Parse(Console.ReadLine());
             int x = 1, y = 1;
