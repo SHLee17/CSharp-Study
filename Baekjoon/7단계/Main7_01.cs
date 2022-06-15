@@ -17,7 +17,7 @@ namespace Baekjoon._7단계
             if (c <= b)
                 Console.WriteLine(-1);
             else
-                Console.WriteLine((a / (c/b)) + 1);
+                Console.WriteLine((a / (c-b)) + 1);
 
 
 

@@ -8,35 +8,39 @@ namespace Baekjoon._7단계
 {
     internal class Main7_05
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             int range = int.Parse(Console.ReadLine());
 
             StringBuilder sb = new StringBuilder();
 
+
             for (int i = 0; i < range; i++)
             {
                 string[] inputs = Console.ReadLine().Split();
-                int temp = 0;
-                int temp2 = 0;
+                int floor = 0;
+                int num = 0;
                 int h = int.Parse(inputs[0]);
                 int w = int.Parse(inputs[1]);
                 int n = int.Parse(inputs[2]);
 
-                temp = h >= n ? h % n : n % h;
-                temp2 = h >= n ? h / n : n / h;
-                if (n == 1)
-                    sb.Append(101);
-                else if (temp == 0)
-                    temp = h * 100 + temp2;
+                floor = n % h * 100;
+                num = n / h + 1;
+
+                if (n % h == 0)
+                {
+                    floor = h * 100;
+                    num = n / h;
+                }
                 else
-                    temp = temp * 100 + temp2 + 1;
+                {
+                    floor = (n % h) * 100;
+                    num = n / h + 1;
+                }
 
-                sb.AppendLine(temp.ToString());
+                sb.AppendLine((floor + num).ToString());
             }
-
             Console.WriteLine(sb);
-            // 30 50 72  1203
         }
     }
 }
