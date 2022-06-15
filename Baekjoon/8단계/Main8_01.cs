@@ -5,57 +5,26 @@ using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Baekjoon._7단계
+namespace Baekjoon._8단계
 {
-    internal class Main7_08
+    internal class Main8_01
     {
+        public static bool isPrime(int num)
+        {
+            for (int i = 2; i * i <= num; i++)
+            {
+                if (num % i == 0) return false;
+            }
+            return true;
+        }
         static void Main(string[] args)
         {
-            //Console.WriteLine('0' - '1');
 
-            string[] AB = Console.ReadLine().Split();
-            string A, B;
-            int n, m;
-
-            if (AB[0].Length >= AB[1].Length)
-            {
-                A = AB[0];
-                B = AB[1];
-                n = AB[0].Length;
-                m = AB[1].Length;
-            }
-            else
-            {
-                A = AB[1];
-                B = AB[0];
-                n = AB[1].Length;
-                m = AB[0].Length;
-            }
-
-            char[] sum = new char[n + 1];
-            for (int i = 0; i < n; i++)
-            {
-                if (m - i - 1 >= 0) sum[n - i] += (char)(A[n - i - 1] + B[m - i - 1] - '0');
-                else sum[n - i] += (char)A[n - i - 1];
-                if (sum[n - i] > '9' && i != n - 1)
-                {
-                    sum[n - i - 1]++;
-                    sum[n - i] = (char)(sum[n - i] - 10);
-                }
-                if (sum[n - i] > '9' && i == n - 1)
-                {
-                    sum[n - i - 1] = '1';
-                    sum[n - i] = (char)(sum[n - i] - 10);
-                }
-            }
-            string str = new string(sum);
-            if (sum[0] != '1') str = str.Substring(1);
-            Console.WriteLine(str);
-
-
+            
         }
     }
 }
+
 
 
 

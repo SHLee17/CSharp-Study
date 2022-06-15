@@ -10,7 +10,6 @@
   <ItemGroup>
     <Folder Include="10단계\" />
     <Folder Include="9단계\" />
-    <Folder Include="8단계\" />
   </ItemGroup>
 
 </Project>
