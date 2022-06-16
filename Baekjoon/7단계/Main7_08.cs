@@ -9,9 +9,8 @@ namespace Baekjoon._7단계
 {
     internal class Main7_08
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
-            //Console.WriteLine('0' - '1');
 
             string[] AB = Console.ReadLine().Split();
             string A, B;

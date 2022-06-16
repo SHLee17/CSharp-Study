@@ -7,25 +7,30 @@ using System.Threading.Tasks;
 
 namespace Baekjoon._8단계
 {
-    internal class Main8_01
+    internal class Main8_02
     {
 
         static void Main1(string[] args)
         {
             int count = 0;
+            int min = 0;
+            int start = int.Parse(Console.ReadLine());
             int range = int.Parse(Console.ReadLine());
-            string[] inputs = Console.ReadLine().Split();
+            //List<int> nums = new List<int>();
 
-            for (int i = 0; i < range; i++)
+            for (int i = start; i <= range; i++)
             {
-                if( Answer(int.Parse( inputs[i])))
-                    count++;
+                if (Answer(i))
+                {
+                    if (count == 0)
+                        min = i;
+                    count += i;
+                }
             }
-
+            if (count == 0) count = -1;
             Console.WriteLine(count);
-
-
-
+            if (min == 0) return;
+            Console.WriteLine(min);
         }
         public static bool Answer(int value)
         {
