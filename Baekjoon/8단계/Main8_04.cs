@@ -10,7 +10,7 @@ namespace Baekjoon._8단계
     internal class Main8_04
     {
 
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
 
             string[] inputs = Console.ReadLine().Split();

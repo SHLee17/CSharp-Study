@@ -10,45 +10,41 @@ namespace Baekjoon._8단계
     internal class Main8_05
     {
 
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
-
-            List<int> nums = new List<int>();
+            StringBuilder sb = new StringBuilder();
+            bool[] primeNumbers = new bool[246913];
+            int halfRange = (int)Math.Sqrt(246913);
+            int count;
+            int a = 1,i, j;
+            
+            for (i = 2; i <= halfRange; i++)
+            {
+                if (primeNumbers[i]) continue;
+                for (j = i + i; j < 246913; j += i)
+                    primeNumbers[j] = true;
+            }
 
             while (true)
             {
-                int a = int.Parse(Console.ReadLine());
-                if (a != 0)
-                    nums.Add(a);
-                else
-                    break;
-            }
+                a = int.Parse(Console.ReadLine());
 
-            StringBuilder sb = new StringBuilder();
+                if (a == 0) break;
 
-            foreach (int item in nums)
-            {
+                count = 0;
 
-                bool[] temp = new bool[item + 1];
+                
 
-                for (int i = 2; i <= Math.Sqrt(item * 2); i++)
+                for (i = a + 1 ; i <= a*2; i++)
                 {
-                    if (temp[i]) continue;
-                    for (int j = i * 2; j <= item * 2; j += i)
-                        temp[j] = true;
-                }
-
-                int count = 0;
-                for (int i = item; i <= item * 2; i++)
-                {
-                    if (!temp[i] && i > 1)
+                    if (i <= 1) continue;
+                    if (!primeNumbers[i])
                         count++;
                 }
-                sb.Append(count + "\n");
 
+                sb.Append(count + "\n");
             }
             Console.WriteLine(sb);
         }
-
     }
 }
