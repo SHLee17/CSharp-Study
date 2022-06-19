@@ -12,11 +12,6 @@ namespace Baekjoon._9단계
         static int y = 0;
         static int input = 0;
 
-        public Main9_04()
-        {
-           
-        }
-
         static void Main(string[] args)
         {
             input = int.Parse(Console.ReadLine()) - 1;
@@ -30,21 +25,24 @@ namespace Baekjoon._9단계
 
         static void Star()
         {
-            if (x >= input && y >= input) return;
+
             if (x == input)
             {
-                Console.Write("\n");
+                Console.Write("*\n");
                 y++;
                 x = 0;
+                if (y > input) return;
             }
-            x++; 
-            if(y % 2 == 0)
-            {
-                Console.Write("*");
-            }
-            else
-                Console.Write(" ");
 
+            if (y % 3 == 1 && x % 3 == 1)
+            Console.Write(" ");
+            //Console.Write(" 빈칸 ");
+            else
+                Console.Write("*");
+                //Console.Write($"[{y},{x}] ");
+
+
+            x++;
             Star();
 
         }
