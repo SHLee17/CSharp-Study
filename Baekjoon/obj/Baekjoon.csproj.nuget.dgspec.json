@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\azuri\\OneDrive\\Desktop\\Study\\Baekjoon\\Baekjoon.csproj": {}
+    "C:\\Users\\1302\\Desktop\\Study\\Baekjoon\\Baekjoon.csproj": {}
   },
   "projects": {
-    "C:\\Users\\azuri\\OneDrive\\Desktop\\Study\\Baekjoon\\Baekjoon.csproj": {
+    "C:\\Users\\1302\\Desktop\\Study\\Baekjoon\\Baekjoon.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\azuri\\OneDrive\\Desktop\\Study\\Baekjoon\\Baekjoon.csproj",
+        "projectUniqueName": "C:\\Users\\1302\\Desktop\\Study\\Baekjoon\\Baekjoon.csproj",
         "projectName": "Baekjoon",
-        "projectPath": "C:\\Users\\azuri\\OneDrive\\Desktop\\Study\\Baekjoon\\Baekjoon.csproj",
-        "packagesPath": "C:\\Users\\azuri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\azuri\\OneDrive\\Desktop\\Study\\Baekjoon\\obj\\",
+        "projectPath": "C:\\Users\\1302\\Desktop\\Study\\Baekjoon\\Baekjoon.csproj",
+        "packagesPath": "C:\\Users\\1302\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\1302\\Desktop\\Study\\Baekjoon\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\azuri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\1302\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -54,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

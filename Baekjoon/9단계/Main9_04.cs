@@ -8,44 +8,64 @@ namespace Baekjoon._9단계
 {
     internal class Main9_04
     {
-        static int x = 0;
-        static int y = 0;
-        static int input = 0;
 
-        static void Main(string[] args)
+        static char[,] map = new char[3000, 3000];
+
+        static void Main()
         {
-            input = int.Parse(Console.ReadLine()) - 1;
+            int n = int.Parse(Console.ReadLine());
 
-            x = 0;
-            y = 0;
-
-            Star();
-            
-        }
-
-        static void Star()
-        {
-
-            if (x == input)
+            for (int i = 0; i < n; i++)
             {
-                Console.Write("*\n");
-                y++;
-                x = 0;
-                if (y > input) return;
+                for (int j = 0; j < n; j++)
+                {
+                    map[i, j] = ' ';
+                }
             }
 
-            if (y % 3 == 1 && x % 3 == 1)
-            Console.Write(" ");
-            //Console.Write(" 빈칸 ");
-            else
-                Console.Write("*");
-                //Console.Write($"[{y},{x}] ");
+            FillStar(n, 0, 0);
+            StringBuilder sb = new StringBuilder();
 
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    sb.Append(map[i, j]);
+                }
+                sb.Append("\n");
+            }
 
-            x++;
-            Star();
+            Console.WriteLine(sb);
 
         }
 
+
+        //별을 채웁니다.
+        static void FillStar(int n, int y, int x)
+        {
+            if (n == 1)
+            {
+                map[y, x] = '*';
+                Console.Write($"({n},{y},{x})");
+                return;
+            }
+            else 
+            Console.Write($"(f{n},{y},{x})");
+            int div = n / 3;
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    if (i == 1 && j == 1)
+                    {
+                        Console.Write($"(빈{n},{y},{x})");
+                        continue;
+                    }
+                    FillStar(div, y + (div * i), x + (div * j));
+                }
+                Console.WriteLine();
+            }
+            return;
+        }
     }
 }
