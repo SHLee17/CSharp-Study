@@ -13,7 +13,7 @@ namespace Baekjoon._9단계
         static char[,] map = new char[a, a];
         
 
-        static void Main()
+        static void Main1()
         {
             StringBuilder sb = new StringBuilder();
 
