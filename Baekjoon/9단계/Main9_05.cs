@@ -9,9 +9,9 @@ namespace Baekjoon._9단계
     internal class Main9_05
     {
         static StringBuilder sb = new StringBuilder();
-        static int cnt = 0;
+        static int count = 0;
 
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             string temp = Console.ReadLine();
 
@@ -20,28 +20,24 @@ namespace Baekjoon._9단계
 
             Hanoi(height, 1, 2, 3);
 
-            sb.Insert(0, $"{cnt}\n");
+            sb.Insert(0, $"{count}\n");
 
             Console.WriteLine(sb);
         }
 
-        public static void Hanoi(int h, int start, int half, int goal)
+        public static void Hanoi(int n, int A, int B, int C)
         {
-            if (h == 1)
+            if (n == 1)
             {
-                Console.WriteLine(start + " " +goal);
-                sb.Append($"{start} {goal}\n");
-                cnt++;
+                sb.Append($"{A} {C}\n");
+                count++;
             }
             else
             {
-                Hanoi(h - 1, start, goal, half);
-
-                Console.WriteLine(start + " " + goal);
-                sb.Append($"{start} {goal}\n");
-                cnt++;
-
-                Hanoi(h - 1, half, start, goal);
+                Hanoi(n - 1, A, C, B);
+                sb.Append($"{A} {C}\n");
+                count++;
+                Hanoi(n - 1, B, A, C);
             }
 
         }
