@@ -26,36 +26,34 @@ namespace Baekjoon._10단계
         }
         static void Main(string[] args)
         {
-            int a = int.Parse(Console.ReadLine());
-            List<Bulk> list = new List<Bulk>();
+            int a = 5;
+            //int a = int.Parse(Console.ReadLine());
+            List<Bulk> list = new List<Bulk>()
+            {
+                new Bulk(55,185),
+                new Bulk(58,183),
+                new Bulk(88,186),
+                new Bulk(60,175),
+                new Bulk(46,155)
+            };
+
+            //for (int i = 0; i < a; i++)
+            //{
+            //    string[] input = Console.ReadLine().Split();
+
+            //    list.Add(new Bulk(int.Parse(input[0]), int.Parse(input[1])));
+            //}
 
             for (int i = 0; i < a; i++)
             {
-                string[] input = Console.ReadLine().Split();
-
-                list.Add(new Bulk(int.Parse(input[0]), int.Parse(input[1])));
-            }
-
-
-            for (int i = 0; i < list.Count - 1; i++)
-            {
-                for (int j = i + 1; j < list.Count; j++)
+                for (int j = 0; j < a; j++)
                 {
-                    if (list[i].h > list[j].h)
+                    if (list[i] != list[j])
                     {
-                        if (list[i].w > list[j].w)
-                        {
-                            list[j].rank++;
-                        }
-                        else
-                        {
-                            list[i].link.Add(list[j]);
-                        }
+
                     }
                 }
             }
-
-            Console.WriteLine(list);
 
         }
     }
