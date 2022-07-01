@@ -8,7 +8,7 @@ namespace Ch03
 {
     internal class _5_Array
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             #region 기본배열
             int[] arr1 = new int[3];

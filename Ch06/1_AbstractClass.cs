@@ -9,7 +9,7 @@ namespace Ch06
 {
     internal class _1_AbstractClass
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             Car sedan = new Sedan("그랜져", "검정색", 0, 2000);
             Car truck = new Truck("포터", "파란색", 0, 1);
