@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Baekjoon._10단계
 {
-    internal class Main10_4
+    internal class Main10_04
     {
         static void Main(string[] args)
         {
@@ -46,7 +46,6 @@ namespace Baekjoon._10단계
                         count++;
                     temp = !temp;
                 }
-
             }
 
             Console.WriteLine(count);
