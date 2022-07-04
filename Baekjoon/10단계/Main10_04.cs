@@ -8,7 +8,7 @@ namespace Baekjoon._10단계
 {
     internal class Main10_04
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
 
             string[] str = Console.ReadLine().Split();
@@ -17,6 +17,31 @@ namespace Baekjoon._10단계
 
             bool[,] chessBoard = new bool[a,b];
 
+            #region Test
+            //string[] tempLine = new string[]
+            //{
+            //    "BBWBWBWB",
+            //    "BWBWBWBW",
+            //    "WBWBWBWB",
+            //    "BWBWBWBW",
+            //    "WBWBWBWB",
+            //    "BWBWBWBW",
+            //    "WBWBWBWB", 
+            //    "BWBWBWBW",
+            //};
+
+            //for (int j = 0; j < a; j++)
+            //{
+
+            //    for (int i = 0; i < tempLine[j].Length; i++)
+            //    {
+            //        if ('w' == tempLine[j][i] || 'W' == tempLine[j][i])
+            //            chessBoard[j, i] = true;
+            //        if ('b' == tempLine[j][i] || 'B' == tempLine[j][i])
+            //            chessBoard[j, i] = false;
+            //    }
+            //}
+            #endregion
 
             for (int j = 0; j < a; j++)
             {
@@ -33,20 +58,33 @@ namespace Baekjoon._10단계
                 }
             }
 
-            bool temp;
-            int count = 0;
-            for (int i = 0; i < a; i++)
-            {
-                temp = i % 2 == 0 ? chessBoard[0, 0] : !chessBoard[0, 0];
 
-                for (int j = 0; j < b; j++)
+            int count = 9999;
+
+            for (int y = 0; y <= a - 8; y++)
+            {
+                for (int x = 0; x <= b - 8; x++)
                 {
-                    if (i == 0 && j == 0) continue;
-                    else if (temp != chessBoard[i, j]) 
-                        count++;
-                    temp = !temp;
+                    for (int k = 0; k < 2; k++)
+                    {
+                        bool temp = k % 2 == 0 ? chessBoard[y, x] : !chessBoard[y, x];
+                        int tempCount = 0;
+
+                        for (int i = 0 + y; i < 8 + y; i++)
+                        {
+                            for (int j = 0 + x; j < 8 + x; j++)
+                            {
+                                if (temp != chessBoard[i, j])
+                                    tempCount++;
+                                temp = !temp;
+                            }
+                            temp = !temp;
+                        }
+                        if (count > tempCount) count = tempCount;
+                    }
                 }
             }
+            
 
             Console.WriteLine(count);
 
