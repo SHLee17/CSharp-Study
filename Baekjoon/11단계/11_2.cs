@@ -8,7 +8,7 @@ namespace Baekjoon._11단계
 {
     internal class _11_2
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             StreamReader sr = new StreamReader(new BufferedStream(Console.OpenStandardInput()));
             StreamWriter sw = new StreamWriter(new BufferedStream(Console.OpenStandardOutput()));
@@ -20,13 +20,15 @@ namespace Baekjoon._11단계
             for (i = 0; i < n; i++)
                 nArr[i] = int.Parse(sr.ReadLine());
 
-            for (i = n - 1 / 2; i >= 0; --i)
+            for (i = n - 1 / 2; i >= 0; i--)
                 SortHeap(nArr, i, n);
-            for (i = n - 1;  i > 0; --i)
+            for (i = n - 1; i > 0; i--)
             {
                 Swap(ref nArr[i], ref nArr[0]);
                 SortHeap(nArr, 0, i);
             }
+
+
 
             foreach (int item in nArr)
                 sb.Append(item).Append('\n');
